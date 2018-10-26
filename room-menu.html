@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="framework/onsen/dist/css/onsenui.css">
+<link rel="stylesheet" href="framework/onsen/dist/css/onsen-css-components.min.css">
+<link rel="stylesheet" href="font-awesome/css/all.min.css">
+<script src="framework/onsen/dist/js/onsenui.min.js"></script>
+<style>
+  a {color:black;}
+  a:link {text-decoration: none;color: black;}
+  a:visited {text-decoration: none;color: black;}
+  a:hover {text-decoration: none;color: black;}
+  a:active {text-decoration: none;color: black;}
+</style>
+<style>
+  /*.button{
+    width: 150px;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    background-color: #2980B9;
+    color: white;
+    font-size: 26px;
+    text-decoration: none;
+    }
+  div .btnmenu{
+    padding-bottom: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    display: inline-block;
+    }*/
+     
+  .segment__button {			
+    color: #2980B9;
+    border-color: #2980B9
+  	}
+
+  :active + .segment__button {
+    color: white;
+  	}
+
+  :checked + .segment__button {
+    background-color: #2980B9;
+  }
+  </style>
+
+<script>
+$(document).ready(function(){
+
+    $(".profile").click(function(){
+            var id = $(this).data('id');
+
+            console.log(id);
+            $.ajax({
+                    method: "GET",
+                    url: "../functions/getDataFromDB.php",
+                    dataType: "json",
+                    data: {id:id},
+                    success: function(data){
+                        console.log(data);
+                        $.each(data, function(idx, item) {
+                            console.log(item.surname);
+                        });
+                    }
+            });
+    });
+
+});
+</script>
+
+    <script>
+        function goBack() 
+          {window.history.back();
+        }
+
+        function openType(evt, roomType) {
+          var i, tabcontent, segment__input;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+          segment__input = document.getElementsByClassName("segment__input");
+          for (i = 0; i < segment__input.length; i++) {
+          segment__input[i].className = segment__input[i].className.replace(" active", "");
+        }
+          document.getElementById(roomType).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+    </script>
+    <title>StudyRooms-Available room</title>
+</head>
+<body bgcolor="#D8E5F1">
+    <!-- top -->
+<div class="toolbar" style="background-color: #1976D2;position: fixed;top: 0px;">
+    <div class="toolbar__left">
+        <i class="fas fa-chevron-left" style="color: white;padding-left: 20%" onclick="goBack()"></i>
+    </div>
+    <div class="toolbar__center" style="color:#1976D2;font-weight:bold;font-size:170%;-webkit-text-stroke:1px white;font-family:Arial;text-align: center;">Reservation
+    </div>
+</div>
+  <!-- mid -->
+<form>
+  <div class="segment" style="position: relative;width: 90%;left: 5%;right: 5%;margin-top: 50px;padding-bottom: 1%;">
+    <div class="segment__item">
+      <input type="radio" class="segment__input" name="roomtype" value="1" checked onclick="openType(event, 'typeA')">
+      <div class="segment__button">Type A</div>
+    </div>
+    <div class="segment__item">
+      <input type="radio" class="segment__input" name="roomtype" value="2" onclick="openType(event, 'typeB')">
+      <div class="segment__button">Type B</div>
+    </div>
+    <div class="segment__item">
+      <input type="radio" class="segment__input" name="roomtype" value="3" onclick="openType(event, 'typeC')">
+      <div class="segment__button">Type C</div>
+    </div>
+    <div class="segment__item">
+      <input type="radio" class="segment__input" name="roomtype" value="4" onclick="openType(event, 'Movie')">
+      <div class="segment__button">Movie</div>
+    </div>
+  </div>
+</form>
+
+<form>
+  <select name="users" onchange="showUser(this.value)">
+    <option value="">Select Type</option>
+    <option value="1">Type A</option>
+    <option value="2">Type B</option>
+    <option value="3">Type C</option>
+    <option value="4">Movie</option>
+  </select>
+</form>
+          
+<div id="txtHint" align="center" style="position: fixed;width: 90%;height:79%;padding-top: 1%;margin-left: 5%;margin-right: 5%;overflow-y: auto;">
+          		<!--<div id="typeA" class="tabcontent" style="display: block;margin-bottom: 10%;">
+          			
+          		<div id="typeB" class="tabcontent" style="display: none;margin-bottom: 10%;">
+            		
+          		<div id="typeC" class="tabcontent" style="display: none;margin-bottom: 10%;">
+            		
+          		<div id="Movie" class="tabcontent" style="display: none;margin-bottom: 10%;">-->
+          		
+</div>
+
+    <!-- footer -->
+    <div class="footer" style="position: fixed;bottom: 0px;width: 100%;">
+      <div class="tabbar">
+        <label class="tabbar__item">
+          <input type="radio" name="tabbar-a" onclick="window.location.href='index.html'">
+        <button class="tabbar__button">
+            <i class="tabbar__icon ion-home"></i>
+            <div class="tabbar__label">Home</div>
+        </button>
+        </label>
+
+        <label class="tabbar__item">
+          <input type="radio" name="tabbar-a" onclick="window.location.href='menu-active.html'">
+        <button class="tabbar__button">
+            <i class="tabbar__icon ion-grid" style="color: #1976D2"></i>
+            <div class="tabbar__label" style="color: #1976D2">Menu</div>
+        </button>
+        </label>
+
+        <label class="tabbar__item">
+          <input type="radio" name="tabbar-a" onclick="window.location.href='profile-active.html'">
+        <button class="tabbar__button">
+            <i class="tabbar__icon ion-person"></i>
+            <div class="tabbar__label">Profile</div>
+        </button>
+        </label>
+    </div>
+  </div>
+</body>
+</html>

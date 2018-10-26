@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="framework/onsen/dist/css/onsenui.css">
+    <link rel="stylesheet" href="framework/onsen/dist/css/onsen-css-components.min.css">
+    <link rel="stylesheet" href="font-awesome/css/all.min.css">
+    <style>
+        a {color:black;}
+        a:link {text-decoration: none;color: black;}
+        a:visited {text-decoration: none;color: black;}
+        a:hover {text-decoration: none;color: black;}
+        a:active {text-decoration: none;color: black;}
+    </style>  
+    <style>
+    .input{
+      padding-bottom: 2%;
+    }
+
+    input[type=text] {
+      width: 50%;
+      padding: 10px 10px;
+      margin: 0px 0;
+      display: inline;
+      border: 1px solid #1976D2;
+      border-radius: 10px;
+      box-sizing: border-box;
+    }
+
+    button[type=submit] {
+      width: 50%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+    form{
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+  </style>
+    <script>
+        function goBack() 
+          {window.history.back();
+        }
+    </script> 
+    <title>StudyRooms-Type A member</title>
+</head>
+<body bgcolor="#D8E5F1">
+    <!-- top -->
+    <div class="toolbar" style="background-color: #1976D2;position: fixed;top: 0px;">
+        <div class="toolbar__left">
+            <i class="fas fa-chevron-left" style="color: white;padding-left: 20%" onclick="goBack()"></i>
+        </div>
+        <div class="toolbar__center" style="color:#1976D2;font-weight:bold;font-size:170%;-webkit-text-stroke:1px white;font-family:Arial;text-align: center;">Reservation
+        </div>
+    </div>
+
+  <!-- mid -->
+    <div style="padding-top: 20%;padding-left: 10%;padding-right: 10%;">
+      <form style="padding-top: 5%;padding-bottom: 2%;background-color: #F4F6F6;border-radius: 12px">
+          <div style="padding-left: 4%;padding-bottom: 3%;">
+              <label>Reservation member</label>
+          </div>
+          <div class="input" align="center">
+              <i class="fas fa-user" style="font-size: 20px;color: #1976D2;"></i>&nbsp;
+              <input type="text" autocomplete="off" required>
+          </div>
+          <div align="center" style="padding-top: 4%;">
+              <button type="submit" value="search">Reserve</button>
+          </div>
+      </form>
+  </div>
+
+    <!-- footer -->
+    <div class="footer" style="position: fixed;bottom: 0px;width: 100%;">
+      <div class="tabbar">
+        <label class="tabbar__item">
+          <input type="radio" name="tabbar-a" onclick="window.location.href='index.html'">
+        <button class="tabbar__button">
+            <i class="tabbar__icon ion-home"></i>
+            <div class="tabbar__label">Home</div>
+        </button>
+        </label>
+
+        <label class="tabbar__item">
+          <input type="radio" name="tabbar-a" onclick="window.location.href='menu-active.html'">
+        <button class="tabbar__button">
+            <i class="tabbar__icon ion-grid" style="color: #1976D2"></i>
+            <div class="tabbar__label" style="color: #1976D2">Menu</div>
+        </button>
+        </label>
+
+        <label class="tabbar__item">
+          <input type="radio" name="tabbar-a" onclick="window.location.href='profile-active.html'">
+        <button class="tabbar__button">
+            <i class="tabbar__icon ion-person"></i>
+            <div class="tabbar__label">Profile</div>
+        </button>
+        </label>
+    </div>
+  </div>
+</body>
+</html>

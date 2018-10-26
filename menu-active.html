@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,shrink-to-fit=no">
+	  <link rel="stylesheet" href="framework/onsen/dist/css/onsenui.css">
+    <link rel="stylesheet" href="framework/onsen/dist/css/onsen-css-components.min.css">
+    <script src="framework/onsen/dist/js/onsenui.min.js"></script>
+    <style>
+        a {color:black;}
+        a:link {text-decoration: none;color: black;}
+        a:visited {text-decoration: none;color: black;}
+        a:hover {text-decoration: none;color: black;}
+        a:active {text-decoration: none;color: black;}
+    </style>
+    <style>
+        .outer{
+        width: 90%;
+        height: 83%; 
+        margin: 0 auto;
+        overflow: hidden;
+        overflow-y: auto;
+        margin-top: 50px;
+        position: fixed;
+        left: 5%;
+        right: 5%;
+        }
+
+        .outer ul{
+        text-align: center;
+        padding: 0px;
+        }
+
+        .outer ul li{
+        float:left;
+        list-style: none;
+        width: 40%;
+        height: ;
+        margin-bottom: 8%; 
+        box-sizing: border-box;
+        }
+
+        .outer ul li .inner{
+        font-size: 18px;
+        }
+
+        @media screen and (max-width:1024px){
+        .outer ul li{
+        width:40%;
+        margin-left: 25px;
+        }
+    </style>
+    <title>StudyRooms-Home</title>
+</head>
+<body bgcolor="#D8E5F1">
+    <!-- top -->
+    <div class="toolbar" style="background-color: #1976D2;width: 100%;position: fixed;top: 0px;left: 0px;right: 0px;">
+        <div class="toolbar__center" style="color:#1976D2;font-weight:bold;font-size:170%;-webkit-text-stroke:1px white;font-family:Arial;text-align: center;">Study Rooms
+        </div>
+    </div>
+
+  <!-- mid -->
+      <div class="outer">
+        <ul>
+          <li>
+            <div class="inner">
+                <a href="booking.html">
+                <img src="icon/menu/search.png" style="background:#FF9800;width:100px;height: 100px;padding:2%; border-radius: 50%;">
+                <br>Reservation
+                </a>        
+            </div>
+          </li>
+
+          <li>
+            <div class="inner">
+                <a href="management.html">
+                <img src="icon/menu/manage.png" style="background:#FD6631;width:100px;height: 100px;padding:2%; border-radius: 50%;">
+                <br>Reservation<br>Management
+                </a>
+            </div>
+          </li>
+
+          <li>
+            <div class="inner">
+                <a href="history.html">
+                <img src="icon/menu/history.png" style="background:#946b5c;width:100px;height: 100px;padding:2%; border-radius: 50%;">
+                <br>History
+                </a>
+            </div>
+          </li>
+
+          <li>
+            <div class="inner">
+                <a href="plan.html">
+                <img src="icon/menu/area.png" style="background:#8BC34A;width:100px;height: 100px;padding:2%; border-radius: 50%;">
+                <br>Study room<br>Plan
+                </a>
+            </div>
+          </li>
+
+          <li>
+            <div class="inner">
+                <a href="privilege.html">
+                <img src="icon/menu/list.png" style="background:#cc77d9;width:100px;height: 100px;padding:2%; border-radius: 50%;">
+                <br>Privilege
+                </a>
+            </div>
+          </li>
+
+          <li>
+            <div class="inner">
+                <a href="contact.html">
+                <img src="icon/menu/contact.png" style="background:#1B9AF7;width:100px;height: 100px;padding:2%; border-radius: 50%;">
+                <br>Contact us
+                </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+     
+    <!-- footer -->
+	<div class="footer" style="width: 100%;position: fixed;bottom: 0px;">
+      <div class="tabbar">
+        <label class="tabbar__item">
+          <input type="radio" name="tabbar-a" onclick="window.location.href='index.html'">
+        <button class="tabbar__button">
+            <i class="tabbar__icon ion-home"></i>
+            <div class="tabbar__label">Home</div>
+        </button>
+        </label>
+
+        <label class="tabbar__item">
+          <input type="radio" name="tabbar-a" onclick="window.location.href='menu-active.html'">
+        <button class="tabbar__button">
+            <i class="tabbar__icon ion-grid" style="color: #1976D2"></i>
+            <div class="tabbar__label" style="color: #1976D2">Menu</div>
+        </button>
+        </label>
+
+        <label class="tabbar__item">
+          <input type="radio" name="tabbar-a" onclick="window.location.href='profile-active.html'">
+        <button class="tabbar__button">
+            <i class="tabbar__icon ion-person"></i>
+            <div class="tabbar__label">Profile</div>
+        </button>
+        </label>
+    </div>
+  </div>
+</body>
+</html>

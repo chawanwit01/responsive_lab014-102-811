@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,shrink-to-fit=no">
+	  <link rel="stylesheet" href="framework/onsen/dist/css/onsenui.css">
+    <link rel="stylesheet" href="framework/onsen/dist/css/onsen-css-components.min.css">
+    <link rel="stylesheet" href="font-awesome/css/all.min.css">
+    <script src="framework/onsen/dist/js/onsenui.min.js"></script>
+    <style>
+        a {color:black;}
+        a:link {text-decoration: none;color: black;}
+        a:visited {text-decoration: none;color: black;}
+        a:hover {text-decoration: none;color: black;}
+        a:active {text-decoration: none;color: black;}
+    </style>
+    <style>
+    .list{
+      width: 85%;
+      margin-top: 10%;
+      padding-top: 3%;
+      padding-left: 3%;
+      padding-right: 3%;
+      padding-bottom: 3%;
+      background-color: #F4F6F6;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      position: relative;
+    }
+
+  </style>
+    <script>
+        function goBack() 
+          {window.history.back();
+        }
+    </script> 
+    <title>StudyRooms-Privilege</title>
+</head>
+<body bgcolor="#D8E5F1">
+    <!-- top -->
+    <div class="toolbar" style="background-color: #1976D2;position: fixed;top: 0px;">
+        <div class="toolbar__left">
+            <i class="fas fa-chevron-left" style="color: white;padding-left: 20%" onclick="goBack()"></i>
+        </div>
+        <div class="toolbar__center" style="color:#1976D2;font-weight:bold;font-size:170%;-webkit-text-stroke:1px white;font-family:Arial;text-align: center;">Privilege
+        </div>
+    </div>
+
+  <!-- mid -->
+    <br>
+    <center>
+      <div class="list">
+          <b>ระเบียบการใช้งาน</b><br>
+          1.ใช้ห้อง อย่างน้อย 1 ชั่วโมง<br>
+          2.ใช้ห้อง ไม่เกิน 3 ชั่วโมง<br>
+          3.จองห้อง ก่อนการใช้งาน อย่างน้อย (ภายในวัน) 1 นาที<br>
+          4.สามารถจองห้องได้ล่วงหน้า (นับจากวันที่ทำการจอง จนถึงวันที่ต้องการจอง) 7 วัน<br>
+          5.จำนวนครั้งที่สามารถจองได้ (ในวันที่ใช้งาน) 1 ครั้ง<br>
+          6.ยืนยัน การเข้าใช้งานไม่เกินเวลาที่จอง 15 นาที<br>
+      </div>
+    </center>
+    
+    <center>
+      <div class="list">
+          <b>Privilege</b><br>
+          1. Use at least 1 hour.<br>
+          2. Use up to 3 hours.<br>
+          3. Book one room at least within 1 minute.<br>
+          4. Can book a room. (From booking day to reservation date) 7 days.<br>
+          5. Number of bookings (On the date of use) 1 time.<br>
+          6. Confirm access no more than 15 minutes.<br>
+      </div>
+    </center>
+
+    <!-- footer -->
+	<div class="footer" style="position: fixed;bottom: 0px;width: 100%;">
+      <div class="tabbar">
+        <label class="tabbar__item">
+          <input type="radio" name="tabbar-a" onclick="window.location.href='index.html'">
+        <button class="tabbar__button">
+            <i class="tabbar__icon ion-home"></i>
+            <div class="tabbar__label">Home</div>
+        </button>
+        </label>
+
+        <label class="tabbar__item">
+          <input type="radio" name="tabbar-a" onclick="window.location.href='menu-active.html'">
+        <button class="tabbar__button">
+            <i class="tabbar__icon ion-grid" style="color: #1976D2"></i>
+            <div class="tabbar__label" style="color: #1976D2">Menu</div>
+        </button>
+        </label>
+
+        <label class="tabbar__item">
+          <input type="radio" name="tabbar-a" onclick="window.location.href='profile-active.html'">
+        <button class="tabbar__button">
+            <i class="tabbar__icon ion-person"></i>
+            <div class="tabbar__label">Profile</div>
+        </button>
+        </label>
+    </div>
+  </div>
+</body>
+</html>
